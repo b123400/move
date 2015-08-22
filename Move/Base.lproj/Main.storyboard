@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fv4-JL-kmx">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Move" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="BRTouchTrackingView" customModule="Move" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="el6-cs-vEt">
+                                <rect key="frame" x="137" y="110" width="325" height="241"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="325" id="El1-mI-Dm8"/>
+                                    <constraint firstAttribute="height" constant="241" id="bPU-Gi-cHN"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 😀😀😀😀😀😀 ex ea commodo consequat. Duis aute irure dolor </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFn-Wa-WUY">
+                                <rect key="frame" x="218" y="397" width="162" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="162" id="Bbv-Ub-lrx"/>
+                                    <constraint firstAttribute="height" constant="23" id="g84-gf-9bo"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="Wgb-PU-ss9" kind="custom" customClass="BRBlowSegue" customModule="Move" customModuleProvider="target" id="Maf-YE-EY0"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jOf-ju-po2">
+                                <rect key="frame" x="138" y="471" width="325" height="241"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="241" id="JWQ-D7-pZR"/>
+                                    <constraint firstAttribute="width" constant="325" id="jue-ut-7Z5"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 😀😀😀😀😀😀 ex ea commodo consequat. Duis aute irure dolor </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gFn-Wa-WUY" firstAttribute="top" secondItem="el6-cs-vEt" secondAttribute="bottom" constant="46" id="1Dt-Gw-dBG"/>
+                            <constraint firstItem="gFn-Wa-WUY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9sV-zJ-6Ee"/>
+                            <constraint firstItem="jOf-ju-po2" firstAttribute="top" secondItem="gFn-Wa-WUY" secondAttribute="bottom" constant="51" id="Iua-qs-xKH"/>
+                            <constraint firstItem="el6-cs-vEt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="46" id="REw-i4-03e"/>
+                            <constraint firstItem="jOf-ju-po2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sir-Ig-5so"/>
+                            <constraint firstItem="el6-cs-vEt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qmN-cQ-UAU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5xo-8w-x4X"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="431" y="462"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tjG-xy-Bgq">
+            <objects>
+                <navigationController id="fv4-JL-kmx" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="w2S-kF-9fM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4gO-cC-tdI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vEH-JN-jNL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-207" y="462"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tRo-Fr-9Lq">
+            <objects>
+                <viewController id="Wgb-PU-ss9" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oQe-5V-g40"/>
+                        <viewControllerLayoutGuide type="bottom" id="QYj-NR-bHM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dQv-r2-IKl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ws3-aF-kDJ">
+                                <rect key="frame" x="142" y="183" width="316" height="233"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="316" id="ObN-dt-xgT"/>
+                                    <constraint firstAttribute="height" constant="233" id="mF5-Wb-UAG"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ws3-aF-kDJ" firstAttribute="centerY" secondItem="dQv-r2-IKl" secondAttribute="centerY" id="fLl-Jb-HzK"/>
+                            <constraint firstItem="Ws3-aF-kDJ" firstAttribute="centerX" secondItem="dQv-r2-IKl" secondAttribute="centerX" id="hlM-Sh-Bfl"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="72C-fd-Eyq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1073" y="462"/>
+        </scene>
+    </scenes>
+</document>
