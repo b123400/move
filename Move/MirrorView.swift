@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BRMirrorView: UIView {
+class MirrorView: UIView {
 
     let sourceView : UIView
     let sourceBounds : CGRect
@@ -16,12 +16,10 @@ class BRMirrorView: UIView {
     init(view sourceView : UIView, bounds : CGRect) {
         self.sourceView = sourceView
         self.sourceBounds = bounds
-        // TODO: change to nil later
-        let rect = sourceView.convertRect(bounds, toView: sourceView.superview)
-        super.init(frame: rect)
+        super.init(frame: bounds)
         
         self.clearsContextBeforeDrawing = false
-        self.opaque = true
+        self.opaque = false
 //        self.backgroundColor = UIColor.clearColor()
     }
 
@@ -29,9 +27,6 @@ class BRMirrorView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
     override func drawRect(rect: CGRect) {
         
         let context = UIGraphicsGetCurrentContext()
@@ -39,5 +34,10 @@ class BRMirrorView: UIView {
         CGContextTranslateCTM(context, -self.sourceBounds.origin.x, -self.sourceBounds.origin.y)
         self.sourceView.layer.renderInContext(context!)
     }
-
+    
+    override func didMoveToSuperview() {
+        super.didMoveToSuperview()
+        // make sure the coordinate is correct
+        self.frame = self.sourceView.convertRect(self.sourceBounds, toView: self.superview)
+    }
 }

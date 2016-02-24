@@ -21,8 +21,8 @@ class ViewController: UIViewController {
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let segue = segue as? BRBlowSegue,
-            view = self.view as? BRTouchTrackingView,
+        if let segue = segue as? BlowSegue,
+            view = self.view as? TouchTrackingView,
             lastPoint = view.lastPoint {
             segue.center = lastPoint
         }

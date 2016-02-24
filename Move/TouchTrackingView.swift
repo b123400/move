@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class BRTouchTrackingView: UIView {
+class TouchTrackingView: UIView {
     
     var lastPoint: CGPoint?
     

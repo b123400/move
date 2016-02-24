@@ -10,7 +10,7 @@ import UIKit
 
 var animator : UIDynamicAnimator?
 
-public class BRBlowSegue: UIStoryboardSegue {
+public class BlowSegue: UIStoryboardSegue {
     public var center: CGPoint
     public var duration: CFTimeInterval = 5.0
     var animators: [UIDynamicAnimator] = []
@@ -25,8 +25,8 @@ public class BRBlowSegue: UIStoryboardSegue {
     
     override public func perform() {
         
-        let viewsToScan = self.viewsToScan(self.sourceViewController.view)
-        let views = self.viewsToAnimate(viewsToScan)
+        let viewsToScan = Set<UIView>() //self.viewsToScan(self.sourceViewController.view)
+        let views = Set<UIView>()
         
         let textViews = views.filter { (view) -> Bool in
             if let _ = view as? UITextView { return true }
@@ -47,7 +47,7 @@ public class BRBlowSegue: UIStoryboardSegue {
             
             let rects = rectsFromTextView(textView)
             let newViews = rects.map({ (rect) -> UIView in
-                BRMirrorView(view: textView, bounds: rect)
+                MirrorView(view: textView, bounds: rect)
             })
             
             let fadeAnimation = CABasicAnimation(keyPath: "opacity")
@@ -79,7 +79,7 @@ public class BRBlowSegue: UIStoryboardSegue {
     func enterDestinationController() {
         
         // TODO: capture shit
-        let viewsToAnimate = self.viewsToScan(self.destinationViewController.view)
+        let viewsToAnimate = Set<UIView>()
         let textViews = viewsToAnimate.filter { (view) -> Bool in
             if let _ = view as? UITextView { return true }
             if let _ = view as? UILabel { return true }
@@ -92,7 +92,7 @@ public class BRBlowSegue: UIStoryboardSegue {
             
             let rects = rectsFromTextView(textView)
             let newViews = rects.map({ (rect) -> UIView in
-                BRMirrorView(view: textView, bounds: rect)
+                MirrorView(view: textView, bounds: rect)
             })
             
             let fadeAnimation = CABasicAnimation(keyPath: "opacity")
@@ -143,35 +143,6 @@ public class BRBlowSegue: UIStoryboardSegue {
             self.animators = []
             self.enterDestinationController()
         }
-    }
-    
-    func viewsToScan(view:UIView) -> Set<UIView> {
-        return Set<UIView>(view.subviews)
-    }
-    
-    func viewsToAnimate(_inputViews:Set<UIView>) -> Set<UIView> {
-        var views = Set<UIView>()
-        var inputViews = _inputViews
-
-        while !inputViews.isEmpty {
-            let thisView = inputViews.first!
-            switch thisView {
-            case _ as UIButton:
-                fallthrough
-            case _ as UITextView:
-                fallthrough
-            case _ as UILabel:
-                fallthrough
-            case true where thisView.subviews.count == 0:
-                inputViews.remove(thisView)
-                views.insert(thisView)
-                
-            default:
-                inputViews.remove(thisView)
-                inputViews.unionInPlace(thisView.subviews)
-            }
-        }
-        return views
     }
     
     func coverViewWithView(view:UIView, animatingViews:Set<UIView>) -> UIView {
