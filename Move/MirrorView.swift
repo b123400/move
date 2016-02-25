@@ -12,15 +12,18 @@ class MirrorView: UIView {
 
     let sourceView : UIView
     let sourceBounds : CGRect
+    let globalBounds : CGRect
     
     init(view sourceView : UIView, bounds : CGRect) {
         self.sourceView = sourceView
         self.sourceBounds = bounds
+        self.globalBounds = self.sourceView.convertRect(bounds, toView: nil)
         super.init(frame: bounds)
         
         self.clearsContextBeforeDrawing = false
         self.opaque = false
-//        self.backgroundColor = UIColor.clearColor()
+        self.layer.fillMode = kCAFillModeBoth
+        
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -38,6 +41,8 @@ class MirrorView: UIView {
     override func didMoveToSuperview() {
         super.didMoveToSuperview()
         // make sure the coordinate is correct
-        self.frame = self.sourceView.convertRect(self.sourceBounds, toView: self.superview)
+        if let superview = self.superview {
+            self.frame = superview.convertRect(self.globalBounds, fromView: nil)
+        }
     }
 }

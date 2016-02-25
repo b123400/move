@@ -17,18 +17,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="el6-cs-vEt">
-                                <rect key="frame" x="137" y="110" width="325" height="241"/>
+                                <rect key="frame" x="137" y="110" width="325" height="150"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="325" id="El1-mI-Dm8"/>
-                                    <constraint firstAttribute="height" constant="241" id="bPU-Gi-cHN"/>
+                                    <constraint firstAttribute="height" constant="150" id="bPU-Gi-cHN"/>
                                 </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 😀😀😀😀😀😀 ex ea commodo consequat. Duis aute irure dolor </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFn-Wa-WUY">
-                                <rect key="frame" x="218" y="397" width="162" height="23"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFn-Wa-WUY">
+                                <rect key="frame" x="219" y="306" width="162" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="162" id="Bbv-Ub-lrx"/>
                                     <constraint firstAttribute="height" constant="23" id="g84-gf-9bo"/>
@@ -39,7 +39,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jOf-ju-po2">
-                                <rect key="frame" x="138" y="471" width="325" height="241"/>
+                                <rect key="frame" x="138" y="380" width="325" height="241"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="241" id="JWQ-D7-pZR"/>

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CF11CBB21B2D1171001F9526 /* MirrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF11CBB11B2D1171001F9526 /* MirrorView.swift */; };
 		CF2833FD1B8829B4001B2597 /* TouchTrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2833FC1B8829B4001B2597 /* TouchTrackingView.swift */; };
+		CF67266F1C7F91A000FCF89C /* UIView+Screenshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF67266E1C7F91A000FCF89C /* UIView+Screenshot.swift */; };
 		CFA643961B2B693C0095D1D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA643951B2B693C0095D1D3 /* AppDelegate.swift */; };
 		CFA643981B2B693C0095D1D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA643971B2B693C0095D1D3 /* ViewController.swift */; };
 		CFA6439B1B2B693C0095D1D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFA643991B2B693C0095D1D3 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		CF11CBB11B2D1171001F9526 /* MirrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MirrorView.swift; sourceTree = "<group>"; };
 		CF2833FC1B8829B4001B2597 /* TouchTrackingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchTrackingView.swift; sourceTree = "<group>"; };
+		CF67266E1C7F91A000FCF89C /* UIView+Screenshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Screenshot.swift"; sourceTree = "<group>"; };
 		CFA643921B2B693C0095D1D3 /* Move.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Move.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFA643951B2B693C0095D1D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFA643971B2B693C0095D1D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			children = (
 				CF11CBB11B2D1171001F9526 /* MirrorView.swift */,
 				CF2833FC1B8829B4001B2597 /* TouchTrackingView.swift */,
+				CF67266E1C7F91A000FCF89C /* UIView+Screenshot.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				CFCFDB8C1C7E3B7A0001D24F /* FancySegue.swift in Sources */,
 				CFA643C41B2B69FA0095D1D3 /* BlowSegue.swift in Sources */,
 				CFCFDB8E1C7E3B9C0001D24F /* FancyTransitionProtocol.swift in Sources */,
+				CF67266F1C7F91A000FCF89C /* UIView+Screenshot.swift in Sources */,
 				CF2833FD1B8829B4001B2597 /* TouchTrackingView.swift in Sources */,
 				CFA643961B2B693C0095D1D3 /* AppDelegate.swift in Sources */,
 				CF11CBB21B2D1171001F9526 /* MirrorView.swift in Sources */,

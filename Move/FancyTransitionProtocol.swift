@@ -82,12 +82,7 @@ extension UIViewController : FancyTransitionViewController {
     
     func screenshotAfterHidingViews(views: [UIView]) -> UIImage {
         self.hideViewsForTransition(views)
-        
-        UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.opaque, 0)
-        self.view.drawViewHierarchyInRect(view.bounds, afterScreenUpdates: false)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
+        let image = self.view.screenshot()
         self.showViewsAfterTransition(views)
         
         return image
