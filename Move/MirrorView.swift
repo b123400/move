@@ -12,7 +12,7 @@ class MirrorView: UIView {
 
     let sourceView : UIView
     let sourceBounds : CGRect
-    let globalBounds : CGRect
+    private let globalBounds : CGRect
     
     init(view sourceView : UIView, bounds : CGRect) {
         self.sourceView = sourceView
@@ -23,7 +23,7 @@ class MirrorView: UIView {
         self.clearsContextBeforeDrawing = false
         self.opaque = false
         self.layer.fillMode = kCAFillModeBoth
-        
+//        self.backgroundColor = UIColor.redColor()
     }
 
     required init(coder aDecoder: NSCoder) {

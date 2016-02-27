@@ -98,7 +98,11 @@ public class FancySegue : UIStoryboardSegue {
         let screenshot = controller.screenshotAfterHidingViews(viewsToHide)
         backgroundView.image = screenshot
         return viewsToAnimate.map {
-            MirrorView(view: $0, bounds: $0.bounds)
+            view in
+            if let view = view as? MirrorView {
+                return view
+            }
+            return MirrorView(view: view, bounds: view.bounds)
         }
     }
 }

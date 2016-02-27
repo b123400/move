@@ -65,6 +65,11 @@ extension UIViewController : FancyTransitionViewController {
     }
     
     func replacementViewsForAnimatingView(view: UIView) -> [UIView] {
+        if let textView = view as? UITextView {
+            return rectsFromTextView(textView).map({
+                MirrorView(view: textView, bounds: $0)
+            })
+        }
         return [view]
     }
     
@@ -86,5 +91,31 @@ extension UIViewController : FancyTransitionViewController {
         self.showViewsAfterTransition(views)
         
         return image
+    }
+    
+    func rectsFromTextView(textView:UITextView) -> [CGRect] {
+        var rects : [CGRect] = []
+        
+        var position : UITextPosition? = textView.beginningOfDocument
+        while position != nil {
+            guard let nextPosition = textView.positionFromPosition(position!, offset: 1) else { break }
+            
+            guard let textRange = textView.textRangeFromPosition(
+                position!,
+                toPosition: nextPosition)
+                else { break }
+            
+            position = nextPosition
+            
+            let rect = textView.firstRectForRange(textRange)
+            if rects.count > 0 && rects.last! == rect {
+                continue
+            }
+            if rect.size.width == 0 || rect.size.height == 0 {
+                continue
+            }
+            rects.append(rect)
+        }
+        return rects
     }
 }
